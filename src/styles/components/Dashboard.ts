@@ -1,11 +1,16 @@
 import { NavLink } from "react-router-dom";
 import styled, { css, keyframes } from "styled-components";
 
-export const MainHeaderContainer = styled.header`
+export const MainHeaderContainer = styled.header<{$fullWidth?: boolean}>`
     display: flex;
     height: 60px;
     background-color: #3aaedb;
     padding: 0 15px;
+    ${({ $fullWidth }) =>
+    
+        !$fullWidth &&
+        css`
+            padding-left: 65px;`}
 `;
 
 export const LeftHeaderContainer = styled.div`
@@ -20,9 +25,14 @@ export const RightHeaderContainer = styled.div``;
 
 export const CentralHeaaderContainer = styled.nav``;
 
-export const FooterContainer = styled.footer`
+export const FooterContainer = styled.footer<{ $fullWidth?: boolean }>`
     height: 50px;
     background-color: bisque;
+    ${({ $fullWidth }) =>
+        !$fullWidth &&
+        css`
+            padding-left: 65px;`}
+
 `;
 
 export const Row = styled.div`
@@ -39,10 +49,15 @@ export const Column = styled.div<{ $fullWidth: boolean }>`
         `}
 `;
 
-export const MainContainer = styled.main`
+export const MainContainer = styled.main<{$fullWidth?: boolean}>`
     overflow: auto;
     height: calc(100vh - 110px);
     padding: 10px;
+    ${({ $fullWidth }) =>
+        !$fullWidth &&
+        css`
+            padding-left: 65px;
+        `}
 `;
 
 export const SidebarContainer = styled.aside<{ $fullWidth: boolean }>`

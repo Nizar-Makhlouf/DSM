@@ -13,7 +13,7 @@ interface ToolBarProps {
 }
 const Toolbar = ({ fullWidth, onClick }: ToolBarProps) => {
     return (
-        <MainHeaderContainer>
+        <MainHeaderContainer $fullWidth={fullWidth}>
             <LeftHeaderContainer>
                 <SidebarToogleButton onClick={onClick} $fullWidth={fullWidth}>
                     {">"}

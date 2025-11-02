@@ -1,7 +1,9 @@
 import { FooterContainer } from "../styles/components/Dashboard";
-
-const Footer = () => {
-    return <FooterContainer>Footer</FooterContainer>;
+interface FooterProps {
+    fullWidth?: boolean;
+}
+const Footer = ({fullWidth} : FooterProps) => {
+    return <FooterContainer $fullWidth={fullWidth}>Footer</FooterContainer>;
 };
 
 export default Footer;

@@ -23,10 +23,10 @@ const PrivateLayout = () => {
             <Sidebar fullWidth={fullWidth} />
             <Column $fullWidth={fullWidth}>
                 <Toolbar onClick={handleFullWidth} fullWidth={fullWidth} />
-                <MainContainer>
+                <MainContainer $fullWidth={fullWidth}>
                     <Outlet />
                 </MainContainer>
-                <Footer />
+                <Footer fullWidth={fullWidth}/>
             </Column>
         </DashBoardContainer>
     );
